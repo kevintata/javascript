@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Speeding Ticket System</h1>
+    Car Speed: <input type="number" name="speedtext" id="speedtext"> MPH
+    <input type="button" value="Verify" onclick="calcular()">
+    <div id="result">
+
+    </div>
+
+    <script>
+        function calcular(){
+            var txtv = window.document.querySelector('input#speedtext')
+            var speed = Number(txtv.value)
+            var result = window.document.querySelector('div#result')
+            result.innerHTML = `<p>Your speed was <strong>${speed} MPH</strong></p>`
+            if (speed > 60){
+                result.innerHTML += `<p>You've been <strong>FINED</strong> for exceeding the speed limit.</p>`
+            }
+            result.innerHTML += `<p>Always wear your seatbelt!</p>`
+        }
+    </script>
+</body>
+</html>

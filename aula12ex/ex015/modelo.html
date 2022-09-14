@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Age Checker</h1>
+    </header>
+
+
+    <section>
+
+        <div>
+            <p>Birth Year:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>Sex:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Male</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Female</label>
+            </p>
+            <p>
+                <input type="button" value="Verify" onclick="verificar()">
+            </p>
+        </div>
+
+        <div id="res">
+            Fill in the blanks to see the result!
+        </div>
+
+    </section>
+
+    
+    <footer>
+        <p> &copy; KevinTata</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
