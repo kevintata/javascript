@@ -3,6 +3,7 @@ function verificar(){
     var ano = data.getFullYear()
     var fano = document.getElementById('txtano')
     var res = document.querySelector('div#res')
+
     if (fano.value.length == 0 || Number(fano.value) > ano){
         window.alert('[ERROR] Verify the year and try again')
     } else {
@@ -11,6 +12,7 @@ function verificar(){
         var genero = ''
         var img = document.createElement('img')
         img.setAttribute('id', 'foto')
+
         if (fsex[0].checked){
             genero = 'Male'
             if (idade >= 0 && idade < 10){
@@ -26,6 +28,7 @@ function verificar(){
                 //idoso
                 img.setAttribute('src', 'foto-elderly-man.png')
             }
+
         } else if (fsex[1].checked){
             genero = 'Female'
             if (idade >= 0 && idade < 10){
@@ -40,9 +43,10 @@ function verificar(){
             } else {
                 img.setAttribute('src','foto-elderly-woman.png')
                 //idoso
-
             }
+
         }
+        
         res.style.textAlign = 'center'
         res.innerHTML = `We've detected a ${genero} who is ${idade} years old.`
         res.appendChild(img)
